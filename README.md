@@ -14,9 +14,11 @@ Projekt z SQL - dostupnost základních potravin široké veřejnosti  (můj 4. 
 ## 🎯 Cíl projektu
 
 Cílem analýzy bylo vytvořit datový podklad umožňující:
-- porovnat vývoj **reálné dostupnosti potravin** v České republice v čase,  
-- zhodnotit, zda **růst mezd odpovídá růstu cen**,  
+- zjistit údaje o **růstu mezd v různých odvětvích** v čase (v rámci ČR),
+- porovnat vývoj **reálné dostupnosti potravin** v čase (v rámci ČR),  
 - zjistit, **které kategorie potravin zdražují nejpomaleji**,  
+- zjistit **výrazné odchylky** růstu cen potravin vzhledem k růstu mezd,
+- zhodnotit, zda **růst mezd odpovídá růstu cen**,  
 - a prověřit, **zda má vývoj HDP vliv na změny v mezdách a cenách**.
 
 ---
@@ -87,15 +89,17 @@ V roce 2018 už to bylo cca **1 700 litrů mléka** nebo **900 kg chleba**.
 | Maso | 2.1 |
 | Pečivo | 3.5 |
 | Mléčné výrobky | 4.2 |
-| Alkoholické nápoje | ~3.7* |
+| Alkoholické nápoje | ~2.9* |
 
 \* Hodnota očištěna o chybějící data vína před 2015.  
 ➡️ **Nealkoholické nápoje zdražují nejpomaleji.**
 
 ---
 
-### 4️⃣ Existuje rok, kdy ceny rostly rychleji než mzdy?
-📉 Ano – **2017**.  
+### 4️⃣ Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd?
+📉 NE
+
+* rok 2017  
 V tomto roce vzrostly ceny o ~9,6 %, zatímco mzdy pouze o ~6,3 %.  
 Rozdíl byl **>3 p.b.**, což je v rámci zkoumaného období nejvýraznější odchylka.
 
