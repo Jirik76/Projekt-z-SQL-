@@ -1,3 +1,11 @@
+-- ==================================================
+-- 📊 Projekt SQL – Sekundární tabulka
+-- Autor: Jiří Požár
+-- Název: t_jiri_pozar_project_sql_secondary_final
+-- Popis: Dodatečná data o dalších evropských státech
+-- ==================================================
+
+
 DROP TABLE IF EXISTS t_jiri_pozar_project_sql_secondary_final;
 
 CREATE TABLE t_jiri_pozar_project_sql_secondary_final AS
@@ -26,7 +34,7 @@ ORDER BY c.country, e.year;
 
 
 -- zobrazení tabulky
-SELECT * FROM t_jiri_pozar_project_sql_secondary_final; 
+--SELECT * FROM t_jiri_pozar_project_sql_secondary_final; 
 
 
 
