@@ -16,26 +16,25 @@ SELECT
     e.year AS rok,
     e.gdp AS hdp,
     ROUND(
-        ((e.gdp - LAG(e.gdp) OVER (PARTITION BY e.country ORDER BY e.year))
-        / NULLIF(LAG(e.gdp) OVER (PARTITION BY e.country ORDER BY e.year), 0) * 100)::numeric,
-        2
+        (
+        	(e.gdp - LAG(e.gdp) OVER (PARTITION BY e.country ORDER BY e.year))
+       	    / NULLIF(LAG(e.gdp) OVER (PARTITION BY e.country ORDER BY e.year),0)
+       	    * 100
+       	 )::numeric,
+         2
     ) AS rust_hdp_pct,
     e.gini AS gini_koeficient,
     e.population AS populace,
     c.life_expectancy AS stredni_delka_zivota,
     c.region_in_world AS region
-FROM economies e
-JOIN countries c 
-    ON e.country = c.country
-WHERE c.region_in_world LIKE '%Europe%'
-  AND e.year BETWEEN 2006 AND 2018
-ORDER BY c.country, e.year;
-
-
-
--- zobrazení tabulky
---SELECT * FROM t_jiri_pozar_project_sql_secondary_final; 
-
-
-
- 
+FROM
+	economies e
+JOIN
+	countries c 
+		ON e.country = c.country
+WHERE
+	c.region_in_world LIKE '%Europe%'
+  	AND e.year BETWEEN 2006 AND 2018
+ORDER BY
+	c.country,
+	e.year; 
